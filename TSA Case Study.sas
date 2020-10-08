@@ -106,7 +106,7 @@ run;
 
 ods noproctitle;
 ods text="3. Analysis for Arizona" ;
-ods text="			a. What are the frequency values for Claim_Site for Arizona?";
+ods text="a. What are the frequency values for Claim_Site for Arizona?";
 ods proclabel "&statename Claims Overview";
 proc freq data=tsa.claims_cleaned order=freq;
 	tables Claim_Site / nopercent nocum;
@@ -114,7 +114,7 @@ proc freq data=tsa.claims_cleaned order=freq;
 run;
 
 ods noproctitle;
-ods text="			b. What are the frequency values for Claim_Type for Arizona?";
+ods text="b. What are the frequency values for Claim_Type for Arizona?";
 ods proclabel "&statename Claims Overview";
 proc freq data=tsa.claims_cleaned order=freq;
 	tables Claim_Type / nopercent nocum;
@@ -122,7 +122,7 @@ proc freq data=tsa.claims_cleaned order=freq;
 run;
 
 ods noproctitle;
-ods text="			c. What are the frequency values for Disposition for Arizona?";
+ods text="c. What are the frequency values for Disposition for Arizona?";
 ods proclabel "&statename Claims Overview";
 proc freq data=tsa.claims_cleaned order=freq;
 	tables  Disposition/ nopercent nocum;
@@ -131,7 +131,7 @@ run;
 
 
 ods proclabel "&statename Close Amount Statistics";
-ods text="			d. What is the mean, minimum, maximum, and sum of Close_Amount for Arizona? Round to
+ods text="d. What is the mean, minimum, maximum, and sum of Close_Amount for Arizona? Round to
 the nearest integer.";
 proc means data=tsa.claims_cleaned mean min max sum maxdec=0;
 	var Close_Amount;
